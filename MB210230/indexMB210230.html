@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Página Personal - Emily MB210230</title>
+  <link rel="stylesheet" href="estilosMB210230.css" />
+</head>
+<body>
+  <header>
+    <h1>Mi página personal</h1>
+    <nav>
+      <ul class="menu">
+         <li><a href="indexMB210230.html" class="activo">Inicio</a></li>
+         <li><a href="sobre-mi.html">Sobre mí</a></li>
+         <li><a href="proyectos.html">Proyectos</a></li>
+         <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p>Hola, soy estudiante de diseño y programación. ¡Bienvenido a mi página!</p>
+
+    <div class="carrusel-container">
+      <input type="radio" name="slider" id="radio1" checked />
+      <input type="radio" name="slider" id="radio2" />
+      <input type="radio" name="slider" id="radio3" />
+
+      <div class="carrusel">
+        <div class="slide"><img src="3.png" alt="Proyecto 1" /></div>
+        <div class="slide"><img src="2.png" alt="Proyecto 2" /></div>
+        <div class="slide"><img src="1.png" alt="Proyecto 3" /></div>
+      </div>
+
+      <div class="navegacion">
+        <label for="radio1" class="bar"></label>
+        <label for="radio2" class="bar"></label>
+        <label for="radio3" class="bar"></label>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - MB210230</p>
+  </footer>
+
+  <!-- Aquí agregas este script para el auto-slide -->
+  <script>
+    let counter = 1;
+    const totalSlides = 3;
+
+    setInterval(() => {
+      counter++;
+      if (counter > totalSlides) {
+        counter = 1;
+      }
+      document.getElementById('radio' + counter).checked = true;
+    }, 4000);
+  </script>
+</body>
+</html>
